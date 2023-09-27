@@ -1,4 +1,6 @@
-import { initializeApp } from 'firebase/app';
+import {
+  initializeApp
+} from 'firebase/app';
 import {
   getAuth,
   signInWithRedirect,
@@ -21,12 +23,12 @@ import {
 } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
-  authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
-  projectId: 'crwn-clothing-db-98d4d',
-  storageBucket: 'crwn-clothing-db-98d4d.appspot.com',
-  messagingSenderId: '626766232035',
-  appId: '1:626766232035:web:506621582dab103a4d08d6',
+  apiKey: "AIzaSyBt1WSQE6nz2vH21bjyBK4EhHsPzljPKOE",
+  authDomain: "crwn-clothing-db-9faaa.firebaseapp.com",
+  projectId: "crwn-clothing-db-9faaa",
+  storageBucket: "crwn-clothing-db-9faaa.appspot.com",
+  messagingSenderId: "792566792574",
+  appId: "1:792566792574:web:07e5943634aa9428c5332f"
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -81,7 +83,10 @@ export const createUserDocumentFromAuth = async (
   const userSnapshot = await getDoc(userDocRef);
 
   if (!userSnapshot.exists()) {
-    const { displayName, email } = userAuth;
+    const {
+      displayName,
+      email
+    } = userAuth;
     const createdAt = new Date();
 
     try {
